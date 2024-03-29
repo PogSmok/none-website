@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    height: 100%;
+    width: 100%;
+    
+    user-select:none;
+}
+
+.background {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+
+    background: url("../resources/home/background.webp") no-repeat center;
+    object-fit: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.foreground {
+    position: absolute;
+    bottom: 0px;
+
+    height: 55vh;
+    max-height: 100%;
+    width: 100%;
+
+    background: url("../resources/home/foreground.webp") no-repeat center;
+    object-fit: cover;
+    background-position: 10% 0, 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.nav-bar {
+    text-align: center;
+    display:inline-block;
+    position: relative;
+
+    width: 100%;
+}
+
+.nav-img {
+    width: 400px;
+}
+
+.socials{
+    text-align: center;
+    display:inline-block;
+    position: relative;
+
+    margin-top: 100px;
+    width: 100%;
+}
+
+.social-label {
+    position: absolute;
+    visibility: hidden;
+
+    width: 300px;
+    margin-top: -90px;
+    margin-left: -280px;
+}
+
+.social-label:nth-of-type(2) {
+    transform: translate(-50px, 0px);
+}
+
+.social-label:nth-of-type(3) {
+    transform: translate(10px, 0px);
+}
+
+.social-img {
+    transition: transform .3s;
+
+    width: 300px;
+}   
+
+.social-img:hover {
+    transform:scale(1.1);
+}
+
+a:hover + .social-label {
+    visibility: visible;
+}
+
+@media screen and (max-width: 1250px) and (min-width: 500px) {
+    body {
+        overflow-y: scroll;
+    }
+
+    .background {
+        height: 600px;
+    }
+
+    .foreground-container {
+        position: absolute;
+        height: 900px;
+        min-height: calc(100vh - 450px);
+        width: 100%;
+        margin-top: -150px;
+    }
+
+    .foreground {
+        height: 100%;
+    }
+
+    .nav-bar {
+        display: grid;
+    }
+
+    .nav-img {
+        width: 350px;
+    }
+
+    .socials {
+        display: grid;
+
+        margin-top: 50px;
+    }
+
+    .social-img {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 0px) {
+    body {
+        overflow-y: scroll;
+    }
+
+    .background {
+        height: 400px;
+    }
+
+    .foreground-container {
+        position: absolute;
+        height: calc(100vh - 300px);
+        min-height: 550px;
+        width: 100%;
+        margin-top: -100px;
+    }
+
+    .foreground {
+        height: 925px;
+    }
+
+    .nav-bar {
+        display: grid;
+
+        margin-top: -50px;
+    }
+
+    .nav-img {
+        width: 250px;
+    }
+
+    .socials {
+        display: grid;
+
+        margin-top: 50px;
+    }
+
+    .social-img {
+        width: 200px;
+    }
+}
