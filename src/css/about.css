@@ -1,0 +1,249 @@
+@font-face {
+    font-family: SpecialElite;
+    src: url("../resources/about/special-elite.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+
+    height: 100%;
+    width: 100%;
+
+    user-select:none;
+
+    background: url("../resources/about/foreground-clean.webp");
+    background-size: 1473px;
+}
+
+.background {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+
+    background: url("../resources/about/background.webp") no-repeat center;
+    object-fit: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.foreground {
+    position: absolute;
+    bottom: 0px;
+
+    height: 55vh;
+    max-height: 100%;
+    width: 100%;
+
+    background: url("../resources/about/foreground.webp") no-repeat center;
+    object-fit: cover;
+    background-position: 10% 0, 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.about-nav {
+    text-align: center;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    margin-top: 25px;
+
+    color: white;
+    justify-content: center;
+}
+
+
+.about-nav-button {
+    position: relative;
+
+    cursor: pointer;
+    padding: 8px 10px;
+    border: white;
+}
+
+.about-nav-button-text {
+    font-family: SpecialElite;
+    font-size: 3rem;
+    margin: 0 10px;
+}
+
+.about {
+    position: relative;
+
+    margin-top: 75px;
+    color: white;
+}
+
+.about-post-container {
+    margin-top: -40px;
+    height: 510px;
+    background: url("../resources/about/foreground.webp") no-repeat center;
+    object-fit: cover;
+    background-position: 10% 0, 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.about-post {
+    user-select: text;
+    z-index: 1;
+    position: relative;
+    height: 500px;
+    margin: 0 5%;
+    display: flex;
+    align-items: center;
+}
+
+.about-img {
+    margin: auto 0;
+    max-width: 500px;
+    max-height: 300px;
+    min-width: 300px;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+.about-text {
+    font-family: SpecialElite;
+    margin-left: 100px;
+    text-align: left;
+    font-size: 50px;
+    word-break: break-word;
+}
+
+@media screen and (max-width: 1250px) and (min-width: 900px) {
+    .background {
+        height: calc(min(75vw, 350px) + 10vh);
+    }
+
+    .foreground {
+        height: calc(95vh - min(75vw, 350px));
+    }
+
+    .about-nav-button-container {
+        padding: 0;
+    }
+
+    .about-nav-button-text {
+        font-size: 2rem;
+    }
+
+    .highlight {
+        object-fit: cover;
+    }
+
+    .about-text {
+        font-size: 35px;
+    }
+}
+
+
+@media screen and (max-width: 900px) and (min-width: 500px) {
+    .background {
+        height: calc(min(75vw, 350px) + 10vh);
+    }
+
+    .foreground {
+        height: calc(95vh - min(75vw, 350px));
+    }
+
+    .about-nav {
+        flex-direction: column;
+    }
+
+    .about-nav-button-container {
+        padding: 0;
+    }
+
+    .about-nav-button-text {
+        font-size: 2rem;
+    }
+
+    .about-post-container {
+        height: 810px;
+    }
+
+    .about-post {
+        flex-direction: column;
+    }
+
+    .highlight {
+        object-fit: cover;
+    }
+
+    .about-text {
+        font-size: 35px;
+        text-align: center;
+
+        height: 280px;
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 0;
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .background {
+        height: calc(min(75vw, 350px) + 10vh);
+    }
+
+    .foreground {
+        height: calc(95vh - min(75vw, 350px));
+    }
+
+    .about-nav {
+        flex-direction: column;
+    }
+
+    .about-nav-button-container {
+        padding: 0;
+    }
+
+    .about-nav-button-text {
+        font-size: 2rem;
+    }
+
+    .about-post-container {
+        height: 810px;
+    }
+
+    .about-post {
+        flex-direction: column;
+    }
+
+    .highlight {
+        object-fit: cover;
+    }
+
+    .about-img {
+        width: 90vw;
+    }
+
+    .about-text {
+        font-size: 25px;
+        text-align: center;
+
+        height: 280px;
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+}

@@ -1,7 +1,0 @@
-db/img-a/*
-!db/img-a/.gitkeep
-db/img-g/folder-img/*
-!db/img-g/folder-img/.gitkeep
-db/img-g/img/*
-!db/img-g/img/.gitkeep
-shellscripts/
