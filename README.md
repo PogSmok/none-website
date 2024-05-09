@@ -14,4 +14,4 @@ Features:
 - PHP 
 - MYSQL
 
-[screenshot]: [https://github.com/PogSmok/none-website/blob/main/screenshot.png?raw=true]
+[screenshot]: https://github.com/PogSmok/none-website/blob/main/screenshot.png?raw=true
